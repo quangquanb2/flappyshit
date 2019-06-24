@@ -2,7 +2,7 @@
 import pygame
 import sys
 import random
-import numpy as np
+# import numpy as np
 from pygame.locals import *
 
 pygame.init()
@@ -147,8 +147,8 @@ def main(MAX_):
 			if (bulletInf2[1] < 0 or bulletInf2[1] > WIDTH) or (bulletInf2[0] >= HEIGHT or bulletInf2[0] <= 0):
 				flag2 = 1
 				
-			scores = int((1339 - np.sqrt((WIDTH - 40 - ObjX)**2 + (HEIGHT - 162//2 - ObjY)**2))//60)
-			
+			# scores = int((1339 - np.sqrt((WIDTH - 40 - ObjX)**2 + (HEIGHT - 162//2 - ObjY)**2))//60)
+			scores = int((1339 - ((WIDTH - 40 - ObjX)**2 + (HEIGHT - 162//2 - ObjY)**2))//60)**(1/2))
 			# Bullet movement
 			tmpW, tmpH = WIDTH, HEIGHT
 			
